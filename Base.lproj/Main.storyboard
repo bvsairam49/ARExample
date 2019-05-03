@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="ARPortal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zyb-Ct-IJj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dhY-Cb-a66">
+                                <rect key="frame" x="0.0" y="10" width="375" height="667"/>
+                            </arscnView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eb2-z9-8wH">
+                                <rect key="frame" x="301" y="593" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="eb2-z9-8wH" secondAttribute="height" multiplier="1:1" id="ZNE-hT-nHV"/>
+                                </constraints>
+                                <state key="normal" image="reset"/>
+                                <connections>
+                                    <action selector="resetAction:" destination="BV1-FR-VrT" eventType="touchUpInside" id="cN5-I4-JE1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dhY-Cb-a66" firstAttribute="height" secondItem="Zyb-Ct-IJj" secondAttribute="height" id="XAi-TQ-zEC"/>
+                            <constraint firstItem="dhY-Cb-a66" firstAttribute="centerX" secondItem="QDn-kx-0ja" secondAttribute="centerX" id="aNM-CX-lDA"/>
+                            <constraint firstItem="dhY-Cb-a66" firstAttribute="width" secondItem="Zyb-Ct-IJj" secondAttribute="width" id="bjW-GK-bKA"/>
+                            <constraint firstItem="QDn-kx-0ja" firstAttribute="bottom" secondItem="eb2-z9-8wH" secondAttribute="bottom" constant="10" id="deD-Bo-Hch"/>
+                            <constraint firstItem="dhY-Cb-a66" firstAttribute="centerY" secondItem="QDn-kx-0ja" secondAttribute="centerY" id="f4C-HK-ULh"/>
+                            <constraint firstItem="QDn-kx-0ja" firstAttribute="trailing" secondItem="eb2-z9-8wH" secondAttribute="trailing" constant="10" id="wp7-3T-IRs"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QDn-kx-0ja"/>
+                    </view>
+                    <connections>
+                        <outlet property="sceneView" destination="dhY-Cb-a66" id="Mt9-i1-F0Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="reset" width="64" height="64"/>
+    </resources>
+</document>
